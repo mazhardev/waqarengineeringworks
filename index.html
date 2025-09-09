@@ -161,6 +161,7 @@
        ===================== */
     .project { display: grid; grid-template-rows: 160px auto; overflow: hidden; }
     .project-media { position: relative; }
+    .project-media img{width:100%;height:100%;object-fit:cover;display:block;}
     .project-media .badge { position: absolute; top: .7rem; left: .7rem; }
     .placeholder {
       width: 100%; height: 100%; display: grid; place-items: center; color: var(--muted);
@@ -306,7 +307,7 @@
           <article class="card project">
             <div class="project-media">
               <span class="pill badge">Street Light</span>
-              <div class="placeholder" role="img" aria-label="Placeholder project image"><img src="1.jpeg" /></div>
+              <img src="1.jpeg" alt="Street Light corridor upgrade at dusk" loading="lazy">
             </div>
             <div class="project-body" style="padding-top: .9rem;">
               <h3>Ring Road Corridor Upgrade</h3>
@@ -316,7 +317,7 @@
           <article class="card project">
             <div class="project-media">
               <span class="pill badge">Industrial</span>
-              <div class="placeholder" role="img" aria-label="Placeholder project image">Image Placeholder</div>
+              <img src="2.jpeg" alt="Factory LV Panel Retrofit with new MSB, DBs and cable trays" loading="lazy">
             </div>
             <div class="project-body" style="padding-top: .9rem;">
               <h3>Factory LV Panel Retrofit</h3>
@@ -326,7 +327,7 @@
           <article class="card project">
             <div class="project-media">
               <span class="pill badge">Commercial</span>
-              <div class="placeholder" role="img" aria-label="Placeholder project image">Image Placeholder</div>
+              <img src="3.jpeg" alt="Business Park LED lighting retrofit at night" loading="l
             </div>
             <div class="project-body" style="padding-top: .9rem;">
               <h3>Business Park Lighting</h3>
