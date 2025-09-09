@@ -5,13 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>WAQAR ENGINEERING WORKS — Powering Progress with Street Light & Electrical Engineering Solutions</title>
   <meta name="description" content="WAQAR ENGINEERING WORKS delivers end-to-end electrical and street lighting projects—survey, design, installation, testing, and maintenance—with a focus on safety and on-time delivery." />
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
-  <link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <!-- Open Graph / Twitter -->
+
+  <!-- Social / Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="WAQAR ENGINEERING WORKS">
   <meta property="og:description" content="Powering Progress with Street Light & Electrical Engineering Solutions">
@@ -23,8 +18,13 @@
   <meta name="twitter:description" content="Powering Progress with Street Light & Electrical Engineering Solutions">
   <meta name="twitter:image" content="hero.jpg">
 
-  <!-- Favicon (emoji, inline base64) -->
-  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAzMiAzMic+PHRleHQgeD0nMCcgeT0nMjQnIGZvbnQtc2l6ZT0nMjQnPiYj1288L3RleHQ+PC9zdmc+" />
+  <!-- Favicons (drop these PNGs next to index.html) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon-32.png">
+  <link rel="icon" type="image/png" href="favicon-32.png">
 
   <!-- JSON-LD Organization -->
   <script type="application/ld+json">
@@ -33,7 +33,7 @@
     "@type": "Organization",
     "name": "WAQAR ENGINEERING WORKS",
     "url": "https://example.com",
-    "logo": "https://example.com/logo.png",
+    "logo": "favicon.png",
     "description": "End-to-end electrical and street lighting projects.",
     "telephone": "+92 301 7339281",
     "email": "info@waqarengineering.com",
@@ -52,193 +52,85 @@
   </script>
 
   <style>
-    /* =====================
-       CSS VARIABLES & THEME
-       ===================== */
-    :root {
-      --bg: #f4f6f8;               /* light background */
-      --surface: #ffffff;           /* card/background */
-      --text: #0d1b2a;              /* primary text */
-      --muted: #445469;             /* secondary text */
-      --accent: #ff8a00;            /* safety orange for CTAs */
-      --accent-2: #2aa7ff;          /* electric blue focus */
-      --nav: #0d1b2a;               /* header bg on light */
-      --nav-text: #e6eef6;          /* header text */
-      --steel: #1b263b;             /* slate */
-      --border: #d7dfe7;
-      --shadow: 0 10px 20px rgba(13,27,42,0.08), 0 2px 6px rgba(13,27,42,0.06);
-      --radius: 14px;
+    /* ======= THEME & TOKENS ======= */
+    :root{
+      --bg:#f4f6f8; --surface:#ffffff; --text:#0d1b2a; --muted:#445469;
+      --accent:#ff8a00; --accent-2:#2aa7ff; --nav:#0d1b2a; --nav-text:#e6eef6;
+      --steel:#1b263b; --border:#d7dfe7; --shadow:0 10px 20px rgba(13,27,42,.08),0 2px 6px rgba(13,27,42,.06);
+      --radius:14px;
     }
-    .theme-dark {
-      --bg: #0d1b2a;               /* deep steel blue */
-      --surface: #1b263b;           /* slate card */
-      --text: #e6eef6;              /* light text */
-      --muted: #a9bbcf;             /* muted */
-      --accent: #ff8a00;
-      --accent-2: #2aa7ff;
-      --nav: #0b1623;
-      --nav-text: #cfe3ff;
-      --steel: #22314a;
-      --border: #2a3a52;
-      --shadow: 0 10px 20px rgba(0,0,0,0.35), 0 2px 6px rgba(0,0,0,0.3);
+    .theme-dark{
+      --bg:#0d1b2a; --surface:#1b263b; --text:#e6eef6; --muted:#a9bbcf;
+      --accent:#ff8a00; --accent-2:#2aa7ff; --nav:#0b1623; --nav-text:#cfe3ff;
+      --steel:#22314a; --border:#2a3a52; --shadow:0 10px 20px rgba(0,0,0,.35),0 2px 6px rgba(0,0,0,.3);
     }
 
-    /* Global Reset */
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.6;
-    }
-    img { max-width: 100%; display: block; }
-    a { color: inherit; text-decoration: none; }
-    :focus-visible { outline: 3px solid var(--accent-2); outline-offset: 2px; border-radius: 6px; }
+    /* ======= Base / Resets ======= */
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    :focus-visible{outline:3px solid var(--accent-2);outline-offset:2px;border-radius:6px}
 
-    /* Utilities */
-    .container { width: min(1100px, 92vw); margin-inline: auto; }
-    .grid { display: grid; gap: 1.25rem; }
-    .grid-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
-    .grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
-    .grid-4 { grid-template-columns: repeat(4, minmax(0,1fr)); }
-    .center { display: grid; place-items: center; }
-    .pill { display: inline-flex; align-items: center; gap: .5rem; padding: .25rem .6rem; border-radius: 999px; font-size: .8rem; border: 1px solid var(--border); background: color-mix(in oklab, var(--surface), #000 3%); }
-    .shadow { box-shadow: var(--shadow); }
-    .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; box-shadow: var(--shadow); transition: transform .25s ease, box-shadow .25s ease; }
-    .card:hover { transform: translateY(-4px); }
-    .btn { --_bg: var(--accent); --_fg: #111; display: inline-flex; align-items: center; justify-content: center; gap: .5rem; border: none; background: var(--_bg); color: var(--_fg); padding: .8rem 1.05rem; border-radius: 12px; font-weight: 700; cursor: pointer; box-shadow: var(--shadow); }
-    .btn.outline { background: transparent; color: var(--accent); border: 2px solid var(--accent); }
-    .btn:focus-visible { outline: 3px solid var(--accent-2); }
-    .section { padding: 80px 0; }
-    .section h2 { font-size: clamp(1.6rem, 2.4vw + 1rem, 2.2rem); margin: 0 0 .75rem; }
-    .muted { color: var(--muted); }
+    /* ======= Utilities ======= */
+    .container{width:min(1100px,92vw);margin-inline:auto;padding-inline:clamp(12px,2vw,20px)}
+    .grid{display:grid;gap:1.25rem}
+    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .section{padding:64px 0}
+    .muted{color:var(--muted)}
+    .pill{display:inline-flex;align-items:center;gap:.5rem;padding:.25rem .6rem;border-radius:999px;font-size:.8rem;border:1px solid var(--border);background:color-mix(in oklab,var(--surface),#000 3%)}
+    .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;box-shadow:var(--shadow);transition:transform .25s, box-shadow .25s}
+    .card:hover{transform:translateY(-4px)}
 
-    /* =====================
-       HEADER / NAV
-       ===================== */
-    header {
-      position: sticky; top: 0; z-index: 50; background: var(--nav); color: var(--nav-text); border-bottom: 1px solid rgba(255,255,255,.06);
-      backdrop-filter: saturate(140%) blur(8px);
-    }
-    .nav { display: flex; align-items: center; justify-content: space-between; padding: .75rem 0; }
-    .brand { font-weight: 900; letter-spacing: .4px; font-size: 1.05rem; }
-    .brand strong { color: var(--accent); }
-    .nav-links { display: flex; gap: 1rem; align-items: center; }
-    .nav-links a { opacity: .9; font-weight: 600; }
-    .nav-actions { display: flex; align-items: center; gap: .5rem; }
-    .icon-btn { background: transparent; border: 1px solid rgba(255,255,255,.15); color: var(--nav-text); padding: .5rem .65rem; border-radius: 10px; cursor: pointer; }
-    .hamburger { display: none; }
+    .btn{background:var(--accent);color:#111;padding:.8rem 1.05rem;border-radius:12px;font-weight:700;cursor:pointer;box-shadow:var(--shadow);border:none}
+    .btn.outline{background:transparent;color:var(--accent);border:2px solid var(--accent)}
 
-    /* Mobile menu */
-    #mobileMenu { display: none; }
-    #mobileMenu.open { display: block; }
-    #mobileMenu a { display: block; padding: .8rem 0; border-bottom: 1px solid rgba(255,255,255,.08); }
+    /* ======= Header / Nav ======= */
+    header{position:sticky;top:0;z-index:50;background:var(--nav);color:var(--nav-text);border-bottom:1px solid rgba(255,255,255,.08)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:.75rem 0}
+    .brand{font-weight:900;font-size:1.05rem}
+    .brand strong{color:var(--accent)}
+    .nav-links{display:flex;gap:1rem}
+    .icon-btn{background:transparent;border:1px solid rgba(255,255,255,.15);color:var(--nav-text);padding:.5rem .65rem;border-radius:10px;cursor:pointer}
+    .hamburger{display:none}
+    #mobileMenu{display:none}
+    #mobileMenu.open{display:block}
+    #mobileMenu a{display:block;padding:.8rem 0;border-bottom:1px solid rgba(255,255,255,.08)}
 
-    @media (max-width: 992px) {
-      .nav-links { display: none; }
-      .hamburger { display: inline-flex; }
+    @media (max-width: 992px){
+      .nav-links{display:none}
+      .hamburger{display:inline-flex}
     }
 
-    /* =====================
-       HERO
-       ===================== */
-    .hero {
-      position: relative; min-height: 72svh; display: grid; place-items: center; color: #fff;
-      background: #0d1b2a url('hero.jpg') center/cover no-repeat fixed;
-      isolation: isolate;
-    }
-    .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom right, rgba(0,0,0,.55), rgba(0,0,0,.35)); z-index: -1; }
-    .hero-inner { text-align: center; padding: 100px 0 80px; }
-    .hero h1 { font-size: clamp(2rem, 4vw + 1rem, 3rem); margin: 0 0 .5rem; letter-spacing: .5px; }
-    .hero p { font-size: clamp(1rem, 1.4vw + .5rem, 1.25rem); margin: 0 0 1.25rem; opacity: .95; }
-    .hero-ctas { display: flex; gap: .75rem; justify-content: center; flex-wrap: wrap; }
+    /* ======= Hero ======= */
+    .hero{position:relative;min-height:72svh;display:grid;place-items:center;color:#fff;
+          background:#0d1b2a url('hero.jpg') center/cover no-repeat}
+    .hero::after{content:\"\";position:absolute;inset:0;background:linear-gradient(to bottom right,rgba(0,0,0,.55),rgba(0,0,0,.35));z-index:-1}
+    .hero-inner{text-align:center;padding:clamp(64px,8vw,120px) 0 clamp(48px,6vw,96px)}
+    .hero-ctas{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
 
-    /* =====================
-       SERVICES
-       ===================== */
-    .services .card h3 { margin: 0 0 .35rem; font-size: 1.1rem; }
-    .services .card p { margin: 0; font-size: .95rem; }
+    /* ======= Projects ======= */
+    .project-media{position:relative;aspect-ratio:16/10;overflow:hidden;border-radius:12px}
+    .project-media img{width:100%;height:100%;object-fit:cover;display:block}
+    .project-media .badge{position:absolute;top:.7rem;left:.7rem}
 
-    /* =====================
-       PROJECTS
-       ===================== */
-    .project { display: grid; grid-template-rows: 160px auto; overflow: hidden; }
-    .project-media { position: relative; }
-    .project-media img{width:100%;height:100%;object-fit:cover;display:block;}
-    .project-media .badge { position: absolute; top: .7rem; left: .7rem; }
-    .placeholder {
-      width: 100%; height: 100%; display: grid; place-items: center; color: var(--muted);
-      background: repeating-linear-gradient(45deg, color-mix(in oklab, var(--surface), #000 6%), color-mix(in oklab, var(--surface), #000 6%) 10px, color-mix(in oklab, var(--surface), #000 12%) 10px, color-mix(in oklab, var(--surface), #000 12%) 20px);
-    }
-
-    /* =====================
-       PROCESS (STEPS)
-       ===================== */
-    .steps { counter-reset: step; }
-    .step { display: grid; grid-template-columns: auto 1fr; gap: .8rem; align-items: start; }
-    .step .num { counter-increment: step; width: 38px; height: 38px; border-radius: 10px; background: var(--accent); color: #111; display: grid; place-items: center; font-weight: 800; }
-    .step .num::before { content: counter(step); }
-
-    /* =====================
-       CERTIFICATIONS
-       ===================== */
-    .badge-tile { display:flex; align-items:center; gap:.6rem; padding:.75rem 1rem; border:1px dashed var(--border); border-radius: 12px; background: color-mix(in oklab, var(--surface), #000 3%); }
-
-    /* =====================
-       ABOUT
-       ===================== */
-    .about-list { list-style: none; padding: 0; margin: .5rem 0 0; display: grid; gap: .4rem; }
-    .about-list li::marker { color: var(--accent); }
-
-    /* =====================
-       CONTACT & FORM
-       ===================== */
-    form { display: grid; gap: .9rem; }
-    label { font-weight: 700; font-size: .9rem; }
-    .input, select, textarea {
-      width: 100%; padding: .8rem .9rem; border-radius: 10px; border: 1px solid var(--border); background: var(--surface); color: var(--text);
-    }
-    .form-row { display:grid; gap:.9rem; }
-    .form-row.cols-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
-
-    /* Toast */
-    .toast { position: fixed; right: 18px; bottom: 18px; background: var(--surface); color: var(--text); border:1px solid var(--border); padding: .85rem 1rem; border-radius: 12px; box-shadow: var(--shadow); opacity: 0; transform: translateY(16px); pointer-events: none; transition: opacity .3s ease, transform .3s ease; }
-    .toast.show { opacity: 1; transform: translateY(0); }
-
-    /* =====================
-       FOOTER
-       ===================== */
-    footer { background: var(--steel); color: #e6eef6; padding: 36px 0 12px; }
-    footer .grid { align-items: start; }
-    .socials { display:flex; gap:.6rem; }
-    .socials a { display:grid; place-items:center; width:36px; height:36px; border-radius:10px; border:1px solid rgba(255,255,255,.2); }
-    .subfooter { border-top: 1px solid rgba(255,255,255,.12); margin-top: 18px; padding-top: 12px; font-size: .9rem; opacity: .9; }
-
-    /* Responsive tweaks */
-    @media (max-width: 900px) {
-      .grid-3 { grid-template-columns: 1fr; }
-      .grid-4 { grid-template-columns: 1fr 1fr; }
-      .grid-2 { grid-template-columns: 1fr; }
-      .form-row.cols-2 { grid-template-columns: 1fr; }
-      .hero { background-attachment: scroll; }
-    }
+    /* ======= Responsive grids ======= */
+    @media (max-width: 1200px){ .grid-3{grid-template-columns:repeat(2,minmax(0,1fr))} }
+    @media (max-width: 900px){ .grid-3{grid-template-columns:1fr} .grid-2{grid-template-columns:1fr} .hero-inner{padding:clamp(56px,10vw,96px) 0 clamp(40px,8vw,80px)} }
+    @media (max-width: 600px){ .btn{width:100%} }
   </style>
 </head>
 <body>
-  <!-- ===================== HEADER ===================== -->
+  <!-- ======= Header ======= -->
   <header role="banner">
     <div class="container nav" aria-label="Primary">
       <div class="brand" aria-label="Logo">WAQAR <strong>ENGINEERING</strong> WORKS</div>
       <nav class="nav-links" aria-label="In-page navigation">
         <a href="#hero">Hero</a>
-        <a href="#services">Services</a>
         <a href="#projects">Projects</a>
-        <a href="#process">Process</a>
-        <a href="#certs">Certifications</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <!-- Add more links as you grow the page -->
       </nav>
       <div class="nav-actions">
         <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme" type="button">🌗</button>
@@ -247,74 +139,35 @@
     </div>
     <div id="mobileMenu" class="container" role="dialog" aria-modal="false" aria-label="Mobile Menu">
       <a href="#hero">Hero</a>
-      <a href="#services">Services</a>
       <a href="#projects">Projects</a>
-      <a href="#process">Process</a>
-      <a href="#certs">Certifications</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
     </div>
   </header>
 
   <main id="main-content">
-    <!-- ===================== HERO ===================== -->
+    <!-- ======= Hero ======= -->
     <section id="hero" class="hero" role="region" aria-label="Hero banner with background image of industrial workers">
       <div class="hero-inner container">
         <h1>WAQAR ENGINEERING WORKS</h1>
         <p>Powering Progress with Street Light & Electrical Engineering Solutions</p>
         <div class="hero-ctas">
-          <a class="btn" href="#contact">Get a Quote</a>
-          <a class="btn outline" href="#services">View Services</a>
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn outline" href="#hero">Get a Quote</a>
         </div>
       </div>
     </section>
 
-    <!-- ===================== SERVICES ===================== -->
-    <section id="services" class="section services" aria-label="Services">
-      <div class="container">
-        <h2>Services</h2>
-        <p class="muted">End-to-end solutions across public lighting and industrial electrical works.</p>
-        <div class="grid grid-3" style="margin-top: 1rem;">
-          <article class="card">
-            <h3>Street Lighting Design & Installation</h3>
-            <p>Photometric design, pole selection, trenching, cabling, and commissioning for roads and public spaces.</p>
-          </article>
-          <article class="card">
-            <h3>Electrical Panel & Wiring</h3>
-            <p>LV panels, busbars, distribution boards, and neatly labelled wiring with as-built documentation.</p>
-          </article>
-          <article class="card">
-            <h3>Industrial Maintenance & Safety Audits</h3>
-            <p>Preventive schedules, load analysis, fault tracing, and compliance checklists.</p>
-          </article>
-          <article class="card">
-            <h3>Solar & Energy Efficiency Upgrades</h3>
-            <p>Solar street lights, smart controllers, and retrofits to reduce energy and maintenance costs.</p>
-          </article>
-          <article class="card">
-            <h3>Troubleshooting & Emergency Repair</h3>
-            <p>Rapid response for outages, short-circuits, and equipment failures—24/7 availability.</p>
-          </article>
-          <article class="card">
-            <h3>Project Management & Compliance</h3>
-            <p>BOQ, procurement, permits, HSE compliance, and stakeholder coordination through handover.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== PROJECTS ===================== -->
+    <!-- ======= Projects ======= -->
     <section id="projects" class="section" aria-label="Featured Projects">
       <div class="container">
         <h2>Featured Projects</h2>
         <p class="muted">Recent works across municipal roads, industrial estates, and commercial zones.</p>
-        <div class="grid grid-3" style="margin-top: 1rem;">
+        <div class="grid grid-3" style="margin-top:1rem">
           <article class="card project">
             <div class="project-media">
               <span class="pill badge">Street Light</span>
               <img src="1.jpeg" alt="Street Light corridor upgrade at dusk" loading="lazy">
             </div>
-            <div class="project-body" style="padding-top: .9rem;">
+            <div class="project-body" style="padding-top:.9rem">
               <h3>Ring Road Corridor Upgrade</h3>
               <p class="muted">High-mast and pole lighting with smart timers and underground cabling.</p>
             </div>
@@ -324,7 +177,7 @@
               <span class="pill badge">Industrial</span>
               <img src="2.png" alt="Factory LV Panel Retrofit with new MSB, DBs and cable trays" loading="lazy">
             </div>
-            <div class="project-body" style="padding-top: .9rem;">
+            <div class="project-body" style="padding-top:.9rem">
               <h3>Factory LV Panel Retrofit</h3>
               <p class="muted">New MSB, DBs, cable trays, and load balancing with minimal downtime.</p>
             </div>
@@ -332,9 +185,9 @@
           <article class="card project">
             <div class="project-media">
               <span class="pill badge">Commercial</span>
-              <img src="3.png" alt="Business Park LED lighting retrofit at night" loading="l
+              <img src="3.png" alt="Business Park LED lighting retrofit at night" loading="lazy">
             </div>
-            <div class="project-body" style="padding-top: .9rem;">
+            <div class="project-body" style="padding-top:.9rem">
               <h3>Business Park Lighting</h3>
               <p class="muted">LED retrofits and control panels to lower energy use and maintenance.</p>
             </div>
@@ -342,258 +195,41 @@
         </div>
       </div>
     </section>
-
-    <!-- ===================== PROCESS ===================== -->
-    <section id="process" class="section" aria-label="Our Process">
-      <div class="container">
-        <h2>Process</h2>
-        <div class="grid grid-3 steps" style="margin-top: 1rem;">
-          <div class="card step"><div class="num"></div><div><h3>Discovery</h3><p class="muted">Define objectives, constraints, and stakeholder needs.</p></div></div>
-          <div class="card step"><div class="num"></div><div><h3>Survey &amp; Design</h3><p class="muted">Site survey, photometric design, and BOQ finalization.</p></div></div>
-          <div class="card step"><div class="num"></div><div><h3>Procurement</h3><p class="muted">Approved vendors, QA checks, and delivery planning.</p></div></div>
-          <div class="card step"><div class="num"></div><div><h3>Installation</h3><p class="muted">Trenching, cabling, panel works, and pole erection.</p></div></div>
-          <div class="card step"><div class="num"></div><div><h3>Testing &amp; Handover</h3><p class="muted">Inspections, load tests, and documentation.</p></div></div>
-          <div class="card step"><div class="num"></div><div><h3>Ongoing Support</h3><p class="muted">Preventive maintenance and rapid fault response.</p></div></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== CERTIFICATIONS ===================== -->
-    <section id="certs" class="section" aria-label="Certifications and Safety">
-      <div class="container">
-        <h2>Certifications &amp; Safety</h2>
-        <div class="grid grid-3" style="margin-top: 1rem;">
-          <div class="badge-tile">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/></svg>
-            <div>
-              <strong>ISO 9001 (Placeholder)</strong>
-              <div class="muted">Quality Management Systems</div>
-            </div>
-          </div>
-          <div class="badge-tile">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/></svg>
-            <div>
-              <strong>PPE Compliance</strong>
-              <div class="muted">Safety-first site operations</div>
-            </div>
-          </div>
-          <div class="badge-tile">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/></svg>
-            <div>
-              <strong>Licensed Electricians</strong>
-              <div class="muted">Certified, experienced crews</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== ABOUT ===================== -->
-    <section id="about" class="section" aria-label="About the company">
-      <div class="container grid grid-2">
-        <div class="card">
-          <h2>About</h2>
-          <p>We deliver end-to-end electrical and street lighting projects—from site survey and design to installation, testing, and maintenance—focused on reliability, safety, and timely delivery.</p>
-          <ul class="about-list">
-            <li>Years in service: <strong>10+ Years</strong></li>
-            <li>Regions served: <strong>Punjab &amp; across Pakistan</strong></li>
-            <li>Support: <strong>24/7 emergency response</strong></li>
-          </ul>
-        </div>
-        <div class="card">
-          <h2>Why Choose Us</h2>
-          <p class="muted">Industrial-grade materials, transparent BOQs, and a safety-first approach on every site.</p>
-          <div class="grid" style="grid-template-columns: 1fr 1fr;">
-            <div class="pill">On-time delivery</div>
-            <div class="pill">HSE compliance</div>
-            <div class="pill">Quality assurance</div>
-            <div class="pill">Skilled workforce</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== CONTACT ===================== -->
-    <section id="contact" class="section" aria-label="Contact form">
-      <div class="container grid grid-2">
-        <div class="card">
-          <h2>Contact</h2>
-          <p class="muted">Tell us about your project. We’ll get back within one business day.</p>
-          <form id="contactForm" novalidate>
-            <div class="form-row cols-2">
-              <div>
-                <label for="name">Name</label>
-                <input class="input" id="name" name="name" type="text" placeholder="Your full name" required>
-              </div>
-              <div>
-                <label for="email">Email</label>
-                <input class="input" id="email" name="email" type="email" placeholder="you@example.com" required>
-              </div>
-            </div>
-            <div class="form-row cols-2">
-              <div>
-                <label for="phone">Phone</label>
-                <input class="input" id="phone" name="phone" type="tel" placeholder="+92 ..." pattern="^[+0-9\s-]{7,}$" required>
-              </div>
-              <div>
-                <label for="service">Service</label>
-                <select id="service" name="service" required>
-                  <option value="">Select a service…</option>
-                  <option>Street Lighting</option>
-                  <option>Electrical Panels</option>
-                  <option>Maintenance & Safety</option>
-                  <option>Solar & Efficiency</option>
-                  <option>Troubleshooting</option>
-                  <option>Project Management</option>
-                </select>
-              </div>
-            </div>
-            <div>
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="4" placeholder="Briefly describe your needs" required></textarea>
-            </div>
-            <div>
-              <label>
-                <input type="checkbox" id="consent" required>
-                I consent to having this information used to contact me about my inquiry.
-              </label>
-            </div>
-            <button class="btn" type="submit">Send Request</button>
-          </form>
-        </div>
-        <div class="card">
-          <h2>Reach Us</h2>
-          <p><strong>Address:</strong> Plot#2 Jalal town, Industrial Area,GT Road, Okara, Pakistan</p>
-          <p><strong>Phone:</strong> +92 301 7339281</p>
-          <p><strong>Email:</strong> info@waqarengineering.com</p>
-          <div class="pill" style="margin-top: .6rem;">Response time: &lt; 24 hours</div>
-        </div>
-      </div>
-    </section>
   </main>
 
-  <!-- Toast element -->
-  <div id="toast" class="toast" role="status" aria-live="polite">Thank you! Your message has been received.</div>
-
-  <!-- ===================== FOOTER ===================== -->
-  <footer role="contentinfo">
-    <div class="container grid grid-3">
-      <div>
-        <div class="brand" style="margin-bottom:.4rem;">WAQAR <strong>ENGINEERING</strong> WORKS</div>
-        <div class="muted">Powering Progress with Street Light & Electrical Engineering Solutions</div>
-      </div>
-      <div>
-        <strong>Quick Links</strong>
-        <div class="grid" style="grid-template-columns: 1fr 1fr; margin-top:.6rem;">
-          <a href="#services">Services</a>
-          <a href="#projects">Projects</a>
-          <a href="#process">Process</a>
-          <a href="#certs">Certifications</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </div>
-      <div>
-        <strong>Connect</strong>
-        <div class="socials" style="margin-top:.6rem;">
-          <a href="#" aria-label="Facebook">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-          </a>
-          <a href="#" aria-label="LinkedIn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          </a>
-          <a href="#" aria-label="Twitter">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="container subfooter">
-      © <span id="year"></span> WAQAR ENGINEERING WORKS. All Rights Reserved.
-    </div>
+  <!-- ======= Footer ======= -->
+  <footer role="contentinfo" style="background:var(--steel);color:#e6eef6;padding:24px 0">
+    <div class="container">© <span id="year"></span> WAQAR ENGINEERING WORKS</div>
   </footer>
 
-  <!-- ===================== SCRIPTS (inline, minimal) ===================== -->
+  <!-- ======= Scripts ======= -->
   <script>
-    // Smooth scroll for mobile menu links
-    function closeMobile() {
-      document.getElementById('mobileMenu').classList.remove('open');
-      const btn = document.getElementById('menuToggle');
-      btn.setAttribute('aria-expanded', 'false');
-    }
-
     // Theme toggle with localStorage
-    (function() {
-      const THEME_KEY = 'wew-theme';
-      const root = document.documentElement;
-      const stored = localStorage.getItem(THEME_KEY);
-      if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        root.classList.add('theme-dark');
-      }
-      document.getElementById('themeToggle').addEventListener('click', () => {
+    (function(){
+      const root=document.documentElement;
+      const key='wew-theme';
+      const stored=localStorage.getItem(key);
+      if(stored==='dark'||(!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)){root.classList.add('theme-dark');}
+      document.getElementById('themeToggle').addEventListener('click',()=>{
         root.classList.toggle('theme-dark');
-        const val = root.classList.contains('theme-dark') ? 'dark' : 'light';
-        localStorage.setItem(THEME_KEY, val);
+        localStorage.setItem(key, root.classList.contains('theme-dark')?'dark':'light');
       });
     })();
 
-    // Mobile hamburger
-    (function() {
-      const toggle = document.getElementById('menuToggle');
-      const menu = document.getElementById('mobileMenu');
-      toggle.addEventListener('click', () => {
-        const open = !menu.classList.contains('open');
+    // Mobile hamburger menu
+    (function(){
+      const toggle=document.getElementById('menuToggle');
+      const menu=document.getElementById('mobileMenu');
+      toggle.addEventListener('click',()=>{
+        const open=!menu.classList.contains('open');
         menu.classList.toggle('open', open);
         toggle.setAttribute('aria-expanded', String(open));
       });
-      // Close when clicking a link
-      menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobile));
-    })();
-
-    // Contact form validation + toast
-    (function() {
-      const form = document.getElementById('contactForm');
-      const toast = document.getElementById('toast');
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const fd = new FormData(form);
-        const name = (fd.get('name')||'').trim();
-        const email = (fd.get('email')||'').trim();
-        const phone = (fd.get('phone')||'').trim();
-        const service = (fd.get('service')||'').trim();
-        const message = (fd.get('message')||'').trim();
-        const consent = document.getElementById('consent').checked;
-
-        // Simple checks
-        const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-        const phoneOk = /^[+0-9\s-]{7,}$/.test(phone);
-        if (!name || !emailOk || !phoneOk || !service || !message || !consent) {
-          alert('Please complete all fields correctly and accept the consent.');
-          return;
-        }
-
-        // Simulate success
-        form.reset();
-        toast.classList.add('show');
-        setTimeout(() => toast.classList.remove('show'), 2800);
-      });
+      menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
     })();
 
     // Year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('year').textContent=new Date().getFullYear();
   </script>
-
-  <!-- ===================== NOTES ===================== -->
-  <!--
-    HERO IMAGE OPTIONS
-    1) Default: references external file hero.jpg placed next to index.html.
-    2) Base64 fallback: if you prefer embedding, replace the .hero background in CSS with the data URL below.
-
-    Example replacement (find .hero background rule):
-      background: #0d1b2a url('data:image/jpeg;base64,REPLACE_WITH_BASE64') center/cover no-repeat fixed;
-
-    Base64 placeholder (commented, replace with your actual image if needed):
-    data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/ (…your hero.jpg base64…)
-  -->
 </body>
 </html>
